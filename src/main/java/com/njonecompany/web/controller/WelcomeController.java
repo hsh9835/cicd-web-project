@@ -17,15 +17,10 @@ public class WelcomeController {
     public String index(Model model) {
         logger.debug("Welcome to njonecompany.com...");
 
-        model.addAttribute("msg", getMessage());
+        model.addAttribute("msg", "Hi, there");
         model.addAttribute("today", new Date());
-        System.out.println(model.getAttribute("today"));
         return "index";
 
-    }
-
-    private String getMessage() {
-        return "Hi, there";
     }
 
 }
